@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEM EXAMPLE</title>
+  </head>
+
+  <body>
+    <!-- BEM (Block Element Modifier) - Bloco__Elemento--Modificador -->
+  
+    <!-- Padronização para classes de elementos utilizamos 2x '__' (underline) 
+    Ex.: .list__item, .list_title
+    
+    Para classes de modificadores utilizamos 2x '--' (traços)
+    Ex.: .list__item--highlight, .list__author--active
+  
+    O que é um bloco?
+    Basicamente, um bloco é um container cujos conteúdos são elementos
+    da marcação HTML.
+    Ex.: -->
+    <ul class="list"></ul>
+  
+    <!-- ===================================================================== -->
+    <!-- O que é um elemento? O elemento é uma 'peça' de dentro do bloco. Ex.: -->
+    <!-- Bloco -->
+    <ul class="list">
+      <!-- Elemento -->
+      <li class="list__item publication">
+        <h2 class="publication__title">Minha Publicação 1</h2>
+      </li>
+      <!-- Elemento -->
+      <li class="list__item publication">
+        <h2 class="publication__title">Minha Publicação 2</h2>
+      </li>
+      <!-- Elemento -->
+      <li class="list__item publication">
+        <h2 class="publication__title">Minha Publicação 3</h2>
+      </li>
+    </ul>
+  
+    <!-- Ideal que o elemento não esteja dentro de outro. -->
+    <li class="list__item__publication">
+      <h2 class="list__item__publication_title">Minha Publicação 1</h2>
+    </li>
+  
+    <!-- ===================================================================== -->
+  
+    <!-- O que é um modificador? -->
+    <!-- Modificadores são as classes que alteram os nossos elementos ou blocos.
+    Ex.: -->
+    <button class="button button--blue button--outline">Click Me</button>
+  </body>
+</html>
+
+<style>
+  /* Block elemento pai */
+  .list {
+    padding: 15px 15px 15px 5px;
+    color: gray;
+  }
+
+  /* Element elemento filho */
+  .list__item {
+    padding: 5px;
+  }
+
+  .publication {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+
+  .publication__title {
+    text-transform: uppercase;
+  }
+
+  /* Elemento pai */
+  .button {
+    background-color: gray;
+    color: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  /* Modificadores */
+  .button--blue {
+    color: blue;
+  }
+
+  /* Modificadores */
+  .button--outline {
+    border: 2px solid black;
+    background-color: white;
+  }
+</style>
