@@ -13,4 +13,4 @@
     - Receber, tratar e responder requisições e eventos do usuário.
     - Solicitar ao Model os dados necessários.
     - Encaminhar resposta do Model para o View.
-    - Capturar dados na View e encaminha para o Model.
+    - Capturar dados na View e encaminhar para o Model.
